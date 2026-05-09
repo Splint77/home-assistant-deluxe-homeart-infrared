@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "DeluxeHomeart Infrared",
+        "description": "Select the infrared emitter entity to use for controlling the DeluxeHomeart Infrared candles.",
+        "data": {
+          "infrared_entity_id": "Infrared emitter"
+        },
+        "data_description": {
+          "infrared_entity_id": "The infrared transmitter entity (e.g. a BroadLink or ESPHome device registered with the infrared integration)."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This infrared emitter is already configured for a DeluxeHomeart Infrared device.",
+      "no_emitters": "No infrared emitter entities were found. Make sure an IR transmitter (e.g. BroadLink, ESPHome) is set up and registered with the infrared integration first."
+    }
+  },
+  "entity": {
+    "button": {
+      "timer_2h": {
+        "name": "Timer 2H"
+      },
+      "timer_4h": {
+        "name": "Timer 4H"
+      },
+      "timer_6h": {
+        "name": "Timer 6H"
+      },
+      "timer_8h": {
+        "name": "Timer 8H"
+      }
+    }
+  }
+}
