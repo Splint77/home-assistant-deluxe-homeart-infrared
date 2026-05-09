@@ -17,30 +17,46 @@ PARALLEL_UPDATES = 1
 
 @dataclass(frozen=True, kw_only=True)
 class DeluxeHomeartButtonDescription(ButtonEntityDescription):
-    """Describes a DeluxeHomeart Infrared timer button."""
+    """Describes a DeluxeHomeart Infrared button."""
 
     command_code: DeluxeHomeartCode
 
 
-TIMER_BUTTON_DESCRIPTIONS: tuple[DeluxeHomeartButtonDescription, ...] = (
+BUTTON_DESCRIPTIONS: tuple[DeluxeHomeartButtonDescription, ...] = (
+    DeluxeHomeartButtonDescription(
+        key="brightness_up",
+        translation_key="brightness_up",
+        icon="mdi:brightness-7",
+        command_code=DeluxeHomeartCode.BRIGHTNESS_UP,
+    ),
+    DeluxeHomeartButtonDescription(
+        key="brightness_down",
+        translation_key="brightness_down",
+        icon="mdi:brightness-5",
+        command_code=DeluxeHomeartCode.BRIGHTNESS_DOWN,
+    ),
     DeluxeHomeartButtonDescription(
         key="timer_2h",
         translation_key="timer_2h",
+        icon="mdi:timer-outline",
         command_code=DeluxeHomeartCode.TIMER_2H,
     ),
     DeluxeHomeartButtonDescription(
         key="timer_4h",
         translation_key="timer_4h",
+        icon="mdi:timer-outline",
         command_code=DeluxeHomeartCode.TIMER_4H,
     ),
     DeluxeHomeartButtonDescription(
         key="timer_6h",
         translation_key="timer_6h",
+        icon="mdi:timer-outline",
         command_code=DeluxeHomeartCode.TIMER_6H,
     ),
     DeluxeHomeartButtonDescription(
         key="timer_8h",
         translation_key="timer_8h",
+        icon="mdi:timer-outline",
         command_code=DeluxeHomeartCode.TIMER_8H,
     ),
 )
@@ -51,11 +67,11 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
-    """Set up DeluxeHomeart Infrared timer buttons from a config entry."""
+    """Set up DeluxeHomeart Infrared buttons from a config entry."""
     infrared_entity_id = entry.data[CONF_INFRARED_ENTITY_ID]
     async_add_entities(
         DeluxeHomeartButton(entry, infrared_entity_id, description)
-        for description in TIMER_BUTTON_DESCRIPTIONS
+        for description in BUTTON_DESCRIPTIONS
     )
 
 

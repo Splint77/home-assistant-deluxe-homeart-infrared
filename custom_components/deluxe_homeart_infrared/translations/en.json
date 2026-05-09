@@ -19,6 +19,12 @@
   },
   "entity": {
     "button": {
+      "brightness_up": {
+        "name": "Brightness up"
+      },
+      "brightness_down": {
+        "name": "Brightness down"
+      },
       "timer_2h": {
         "name": "Timer 2H"
       },

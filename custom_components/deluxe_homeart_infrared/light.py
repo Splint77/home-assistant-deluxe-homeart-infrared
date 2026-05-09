@@ -42,6 +42,7 @@ class DeluxeHomeartLight(DeluxeHomeartEntity, LightEntity, RestoreEntity):
     _attr_color_mode = ColorMode.BRIGHTNESS
     _attr_supported_color_modes = {ColorMode.BRIGHTNESS}
     _attr_assumed_state = True
+    _attr_icon = "mdi:candle"
     # Main entity for the device — name comes from the device name alone
     _attr_name = None
 
