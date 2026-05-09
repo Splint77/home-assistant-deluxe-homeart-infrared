@@ -1,8 +1,8 @@
 {
   "domain": "deluxe_homeart_infrared",
   "name": "DeluxeHomeart Infrared",
-  "version": "0.0.2",
-  "documentation": "https://github.com/Splint77/home-assistant-deluxe-homeart-infrared",
+  "version": "0.0.3",
+  "documentation": "https://github.com/Splint77/DeluxeHomeart-Infrared-HA",
   "dependencies": ["infrared"],
   "codeowners": ["@Splint77"],
   "integration_type": "device",
