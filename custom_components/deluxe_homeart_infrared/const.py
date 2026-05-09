@@ -2,7 +2,7 @@
 
 from enum import IntEnum
 
-from infrared_protocols.commands.nec import NECCommand
+from infrared_protocols.commands import NECCommand
 
 DOMAIN = "deluxe_homeart_infrared"
 CONF_INFRARED_ENTITY_ID = "infrared_entity_id"
