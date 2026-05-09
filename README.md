@@ -35,7 +35,7 @@ All candles in IR range are controlled simultaneously — there is no way to add
 ## Installation
 
 1. In Home Assistant, go to **HACS** → **Integrations** → three-dot menu → **Custom repositories**
-2. Add `https://github.com/Splint77/home-assistant-deluxe-homeart-infrared` as an **Integration**
+2. Add `https://github.com/Splint77/DeluxeHomeart-Infrared-HA` as an **Integration**
 3. Search for **DeluxeHomeart Infrared** and download it
 4. Restart Home Assistant
 
