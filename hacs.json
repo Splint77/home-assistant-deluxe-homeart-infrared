@@ -2,5 +2,6 @@
     "name": "Deluxe Homeart Infrared",
     "hacs": "1.6.0",
     "homeassistant": "2026.4.0",
-    "render_readme": true
+    "render_readme": true,
+    "icon": "https://raw.githubusercontent.com/Splint77/Deluxe-Homeart-Infrared-HA/main/custom_components/deluxe_homeart_infrared/brand/icon.png"
 }
