@@ -1,4 +1,4 @@
-"""Config flow for the DeluxeHomeart Infrared integration."""
+"""Config flow for the Deluxe Homeart Infrared integration."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ from .const import CONF_INFRARED_ENTITY_ID, DOMAIN
 
 
 class DeluxeHomeartConfigFlow(ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for DeluxeHomeart Infrared."""
+    """Handle a config flow for Deluxe Homeart Infrared."""
 
     VERSION = 1
 
@@ -41,7 +41,7 @@ class DeluxeHomeartConfigFlow(ConfigFlow, domain=DOMAIN):
             entity_name = (
                 entry.name or entry.original_name or entity_id if entry else entity_id
             )
-            title = f"DeluxeHomeart Infrared via {entity_name}"
+            title = f"Deluxe Homeart Infrared via {entity_name}"
 
             return self.async_create_entry(title=title, data=user_input)
 

@@ -1,4 +1,4 @@
-"""Button platform for the DeluxeHomeart Infrared integration."""
+"""Button platform for the Deluxe Homeart Infrared integration."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ PARALLEL_UPDATES = 1
 
 @dataclass(frozen=True, kw_only=True)
 class DeluxeHomeartButtonDescription(ButtonEntityDescription):
-    """Describes a DeluxeHomeart Infrared button."""
+    """Describes a Deluxe Homeart Infrared button."""
 
     command_code: DeluxeHomeartCode
 
@@ -67,7 +67,7 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
-    """Set up DeluxeHomeart Infrared buttons from a config entry."""
+    """Set up Deluxe Homeart Infrared buttons from a config entry."""
     infrared_entity_id = entry.data[CONF_INFRARED_ENTITY_ID]
     async_add_entities(
         DeluxeHomeartButton(entry, infrared_entity_id, description)
@@ -76,7 +76,7 @@ async def async_setup_entry(
 
 
 class DeluxeHomeartButton(DeluxeHomeartEntity, ButtonEntity):
-    """DeluxeHomeart Infrared timer button entity."""
+    """Deluxe Homeart Infrared timer button entity."""
 
     entity_description: DeluxeHomeartButtonDescription
 

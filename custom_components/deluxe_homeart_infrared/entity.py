@@ -1,4 +1,4 @@
-"""Base entity for the DeluxeHomeart Infrared integration."""
+"""Base entity for the Deluxe Homeart Infrared integration."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 class DeluxeHomeartEntity(Entity):
-    """DeluxeHomeart Infrared base entity."""
+    """Deluxe Homeart Infrared base entity."""
 
     _attr_has_entity_name = True
     _attr_should_poll = False
@@ -35,7 +35,7 @@ class DeluxeHomeartEntity(Entity):
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
             name=entry.title,
-            manufacturer="DeluxeHomeart",
+            manufacturer="Deluxe Homeart",
             model="FB-0001",
         )
 

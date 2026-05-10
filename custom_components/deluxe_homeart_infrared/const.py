@@ -1,4 +1,4 @@
-"""Constants for the DeluxeHomeart Infrared integration."""
+"""Constants for the Deluxe Homeart Infrared integration."""
 
 from enum import IntEnum
 

@@ -1,16 +1,16 @@
-# Home Assistant Integration Spec: DeluxeHomeart Infrared
+# Home Assistant Integration Spec: Deluxe Homeart Infrared
 
 ## Project Overview
 
 **Integration name:** `deluxe_homeart_infrared`  
 **Repository:** `Splint77/home-assistant-deluxe-homeart-infrared`  
-**Description:** Home Assistant integration for DeluxeHomeart FB-0001 IR remote LED candles. Sends NEC infrared commands via the HA `infrared` component to control on/off, brightness, and 2/4/6/8-hour timers. Codes reverse-engineered from physical capture.
+**Description:** Home Assistant integration for Deluxe Homeart FB-0001 IR remote LED candles. Sends NEC infrared commands via the HA `infrared` component to control on/off, brightness, and 2/4/6/8-hour timers. Codes reverse-engineered from physical capture.
 
 ---
 
 ## The Physical Device
 
-- **Remote model:** FB-0001 (DeluxeHomeart)
+- **Remote model:** FB-0001 (Deluxe Homeart)
 - **EAN:** 745114424044
 - **Battery:** CR2025 3V (included)
 - **Dimensions:** 9.9 cm × 4.3 cm, black
@@ -20,7 +20,7 @@
   - 2H, 4H, 6H, 8H timer buttons (ring around center)
   - Brightness + (up arrow)
   - Brightness − (down arrow)
-- **Compatible with:** All DeluxeHomeart / RealFlame LED candles (indoor and outdoor). Note: black/dark coloured candles have reduced IR reception range.
+- **Compatible with:** All Deluxe Homeart / RealFlame LED candles (indoor and outdoor). Note: black/dark coloured candles have reduced IR reception range.
 
 ---
 
@@ -95,11 +95,11 @@ Since the candle has no state feedback, the integration must track `is_on` local
 ### Config flow
 
 ```
-User opens Add Integration → searches "DeluxeHomeart Infrared"
+User opens Add Integration → searches "Deluxe Homeart Infrared"
   Step 1: Select infrared emitter entity
     - Shows all available infrared.* entities via async_get_emitters()
     - Aborts with "no_emitters" if none are registered
-  → Creates config entry with auto-generated title "DeluxeHomeart Infrared via {emitter_name}"
+  → Creates config entry with auto-generated title "Deluxe Homeart Infrared via {emitter_name}"
 ```
 
 ### File structure
@@ -123,7 +123,7 @@ custom_components/deluxe_homeart_infrared/
 ```json
 {
   "domain": "deluxe_homeart_infrared",
-  "name": "DeluxeHomeart Infrared",
+  "name": "Deluxe Homeart Infrared",
   "version": "1.0.0",
   "documentation": "https://github.com/Splint77/home-assistant-deluxe-homeart-infrared",
   "dependencies": ["infrared"],
@@ -180,7 +180,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 class DeluxeHomeartEntity(Entity):
-    """DeluxeHomeart Infrared base entity."""
+    """Deluxe Homeart Infrared base entity."""
 
     _attr_has_entity_name = True
     _attr_should_poll = False
@@ -191,7 +191,7 @@ class DeluxeHomeartEntity(Entity):
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
             name=entry.title,
-            manufacturer="DeluxeHomeart",
+            manufacturer="Deluxe Homeart",
             model="FB-0001",
         )
 
@@ -280,7 +280,7 @@ class DeluxeHomeartLight(DeluxeHomeartEntity, LightEntity, RestoreEntity):
 
 4. **Timer is not tracked.** The timer buttons send a one-shot IR command that starts an auto-off countdown in the candle. HA has no way to know the timer state. Timer buttons are modelled as `button` entities (momentary press).
 
-5. **Multiple candles.** All DeluxeHomeart candles share the same IR address — one button press controls all candles in range simultaneously. This is by design (broadcast IR).
+5. **Multiple candles.** All Deluxe Homeart candles share the same IR address — one button press controls all candles in range simultaneously. This is by design (broadcast IR).
 
 6. **Not all candles support brightness.** According to product documentation, brightness adjustment is not supported by all candle models. The integration still exposes the buttons.
 

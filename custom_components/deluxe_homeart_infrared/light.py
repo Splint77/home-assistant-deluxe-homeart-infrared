@@ -1,4 +1,4 @@
-"""Light platform for the DeluxeHomeart Infrared integration."""
+"""Light platform for the Deluxe Homeart Infrared integration."""
 
 from __future__ import annotations
 
@@ -30,14 +30,14 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
-    """Set up DeluxeHomeart Infrared light from a config entry."""
+    """Set up Deluxe Homeart Infrared light from a config entry."""
     async_add_entities(
         [DeluxeHomeartLight(entry, entry.data[CONF_INFRARED_ENTITY_ID])]
     )
 
 
 class DeluxeHomeartLight(DeluxeHomeartEntity, LightEntity, RestoreEntity):
-    """DeluxeHomeart Infrared candle — light entity."""
+    """Deluxe Homeart Infrared candle — light entity."""
 
     _attr_color_mode = ColorMode.BRIGHTNESS
     _attr_supported_color_modes = {ColorMode.BRIGHTNESS}
