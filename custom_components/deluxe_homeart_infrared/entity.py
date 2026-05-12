@@ -36,7 +36,6 @@ class DeluxeHomeartEntity(Entity):
             identifiers={(DOMAIN, entry.entry_id)},
             name=entry.title,
             manufacturer="Deluxe Homeart",
-            model="FB-0001",
         )
 
     async def async_added_to_hass(self) -> None:
