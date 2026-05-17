@@ -9,7 +9,7 @@ Repository: `https://github.com/Splint77/Deluxe-Homeart-Infrared-HA`
 ## File structure
 
 ```
-custom_components/deluxe_homeart_infrared/
+custom_components/schou_infrared/
 ├── __init__.py          # Entry setup / teardown
 ├── manifest.json        # Integration metadata
 ├── config_flow.py       # UI config flow — selects infrared emitter entity

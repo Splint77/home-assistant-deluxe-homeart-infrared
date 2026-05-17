@@ -1,0 +1,12 @@
+{
+  "domain": "schou_infrared",
+  "name": "Schou Infrared",
+  "codeowners": ["@Splint77"],
+  "config_flow": true,
+  "dependencies": ["infrared"],
+  "documentation": "https://github.com/Splint77/Schou-Infrared-HA",
+  "integration_type": "device",
+  "iot_class": "assumed_state",
+  "issue_tracker": "https://github.com/Splint77/Schou-Infrared-HA/issues",
+  "version": "0.0.1"
+}
